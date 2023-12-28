@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Add a New Puppy</h1>
+    <p>Exciting times! If you have a new adorable puppy ready to find a loving home, you're in the right place. Please enter the owner details along with the Puppy ID to add your furry friend to our adoption listings. Join us in the journey of connecting these sweethearts with families eager to welcome a new member into their hearts and homes.</p>
+
+    <form method="POST">
+        {{form.hidden_tag()}}
+        <div class="mb-3">
+            {{form.name.label()}} {{form.name()}}
+            {{form.submit()}}
+        </div>
+    </form>
+</div>
+
+
+{% endblock content %}

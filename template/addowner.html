@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Enter the Owner Details along with Puppy ID</h1>
+    <p>Ready to take the first step in bringing home your new furry friend? Provide us with the necessary details about yourself and the unique Puppy ID, and embark on a heartwarming journey of love and companionship. Our carefully crafted website is dedicated to connecting you with adorable puppies eager to become cherished members of your family.</p>
+
+    <form method="POST">
+        {{form.hidden_tag()}}
+        <div class="mb-3">
+            {{form.name.label()}} {{form.name()}}
+            {{form.puppy_id.label()}} {{form.puppy_id()}}
+            {{form.submit()}}
+        </div>
+    </form>
+</div>
+
+
+
+
+{% endblock content %}
