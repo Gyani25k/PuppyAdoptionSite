@@ -5,11 +5,24 @@
 <div class="jumbotron">
     <h1>Explore Our Available Puppies</h1>
     <p>Welcome to a world of wagging tails and unconditional love! Discover the joy of adoption by exploring our listing of adorable puppies waiting for their forever homes. Browse through the profiles, and when you find that perfect match, provide your owner details along with the Puppy ID to start the heartwarming journey of love and companionship.</p>
-    <ul>
-        {% for pup in puppies %}
-        <li>{{pup.name}}</li>
-        {% endfor %}
-    </ul>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pup in puppies %}
+            <tr>
+            <th scope="row">{{pup.id}}</th>
+            <td>{{pup.name}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+
 </div>
 
 
